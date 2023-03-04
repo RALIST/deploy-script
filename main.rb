@@ -13,7 +13,8 @@ config['servers'].compact.each do |server|
   options = instance.config_for(server)
 
   conn = Net::SSH.start(options.delete(:host), options.delete(:user), **options)
-  commands = config['commands'] + server['commands']
+  commands = config['commands'] || []
+  commands += server['commands'] || []
   commands.compact.each do |command|
     res = conn.exec!(command)
     puts res

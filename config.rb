@@ -17,7 +17,9 @@ class Config
       options[key.to_sym] ||= config[key] if present?(config, key)
     end
 
-    unless config['certs'].nil? && config['certs'].is_a?(Array)
+    return options if config['certs'].nil?
+
+    if config['certs'].is_a?(Array)
       config['certs'].reject!{|v| v == nil || v == ''}
       options[:keycerts] = config['certs']
     end
