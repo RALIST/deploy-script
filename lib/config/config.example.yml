@@ -1,6 +1,6 @@
 ---
+perform_async: false # exec through sidekiq
 # list of keycerts if login vai publickey
-perform_async: false
 certs:
   - ~/.ssh/public_key.pub
 user: root # username
