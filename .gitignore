@@ -1,2 +1,2 @@
-/config.yml
-/log/*.log
+/lib/config/config.yml
+/lib/log/*.log
