@@ -1,0 +1,5 @@
+- install ruby
+- gem install bundler
+- bundle install
+- cp config.example.yml config.yml
+- ruby main.rb
