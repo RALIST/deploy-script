@@ -34,7 +34,10 @@ config['servers'].compact.each do |server|
     end
 
     channel.wait
-
+  rescue => e
+    server_data << ["There was error while executing commands: #{e.message}"]
+    next
+  ensure
     File.open("log/#{server['host']}.log", "w") { |file| file.write(server_data.join)}
   end
 end

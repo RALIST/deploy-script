@@ -7,8 +7,7 @@ password: # password
 commands: #commands to execute
   - date
 servers:
-  -
-    host: 75.119.135.96 # host or ip
+  - host: 75.119.135.96 # host or ip
     password: password # password for log pass auth
     user: user # override user
     port: 22 # port
