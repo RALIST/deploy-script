@@ -1,1 +1,1 @@
-bundle exec sidekiq -c 10 -r ./application.rb
+bundle exec sidekiq -C ./lib/config/sidekiq.yml -r ./application.rb
